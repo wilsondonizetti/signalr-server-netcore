@@ -56,10 +56,7 @@ namespace SignalRServerNetCore31
                 .WithOrigins("*",
                 "http://localhost:3000",
                 "http://*:3000",
-                "https://logistics-master-pwa.digital-nonprod.fcalatam.com.br",
-                "https://logistics-master-pwa.digital.fcalatam.com.br",
-                "https://logistics.fcalatam.com.br",
-                "https://logistics-internal.fcalatam.com.br")
+                "https://192.168.0.107")
                 .AllowCredentials());
 
 

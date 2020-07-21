@@ -82,12 +82,12 @@ namespace SignalRServerNetCore31.SignalRHubs
             }
         }
 
-        public async Task SendObjectToUser(string user)
+        public async Task SendObjectToUser(object obj, string user)
         {
             var conectionsUser = _connections.GetConnections(user).ToList();
             if (conectionsUser.Count > 0)
             {
-                await Clients.Clients(conectionsUser).SendAsync("ReceiveObjectMessage", new { id = 1, descricao = "teste de envio de objeto" });
+                await Clients.Clients(conectionsUser).SendAsync("ReceiveObjectMessage", obj);
             }
         }
     }
